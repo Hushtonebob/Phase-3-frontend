@@ -2,14 +2,15 @@ import {React, useState} from "react"
 
 
 function GameInfo({
-    title, coverArt, gameYear,review,id
+    title, coverArt, gameYear,review,id,render,setRender
 }){
 
     const [reviewHidden, setReviewHidden] = useState(true);
     const [deleteHidden, setDeleteHidden] = useState(true);
+    const [hiddenInfo, setHiddenInfo] = useState(true);
     const [patch, setPatch] = useState(0);
-    const [frontValue, setFrontValue] = useState(review)
-    const [plat, setPlat] = useState()
+    const [frontValue, setFrontValue] = useState(review);
+    const [info, setInfo] = useState([]);
     
     function handleNumber(e){
         setPatch(e.target.value);
@@ -29,23 +30,25 @@ function GameInfo({
         })
         .then((res =>res.json()))
         .then(data => setFrontValue(data.review));
+        setReviewHidden(!reviewHidden)
     }
 
     const handleDelete = () => {
-        document.getElementById("gameInfo").remove();
-
         fetch(`http://localhost:9292/games/${id}`,{
             method:"DELETE",})
         .then(res=>res.json())
-        alert("This entry has been deleted!")
+        setDeleteHidden(!deleteHidden);
+        alert("This entry has been deleted!");
+        setRender(!render);
     }
-    const handlePlatform = () =>{
-        fetch(`http://localhost:9292/games/${id}`)
+    const handleInfo = () =>{
+        fetch(`http://localhost:9292/games/platform/${id}`)
         .then(res=>res.json())
-        .then()
+        .then(data=>{console.log(data);setInfo(data)})
+        setHiddenInfo(!hiddenInfo)
     }
-
     return(
+        
         <div id="gameInfo">
             <img id="coverArt" src={coverArt} alt="This didn't load for some reason"></img>            
             <h1 id="gameTitle">{title}</h1>
@@ -54,6 +57,7 @@ function GameInfo({
             <div id="buttons">
                 <button id="updateGame" onClick={()=>setReviewHidden(!reviewHidden)}>Change Review?</button>
                 <button id="deleteGame" onClick={()=>setDeleteHidden(!deleteHidden)}>Delete?</button>
+                <button id="moreInfo" onClick ={handleInfo}>More Info?</button>
             </div>
             <div id="update">
                 <select id="textUpdate" onChange={handleNumber} type="text" hidden={reviewHidden} placeholder="Update rating here!">
@@ -72,8 +76,8 @@ function GameInfo({
                 </select>
                     <button id="updateConfirm" onClick={handleUpdate} hidden={reviewHidden}>Click here to update</button>
             </div>
-
                 <button id="confirmDeleteBtn" onClick={handleDelete} hidden={deleteHidden}>This cannot be undone!</button>
+                <h1 id="platInfo" hidden={hiddenInfo}>{info[0]}</h1>
         </div>
     )
 };

@@ -4,7 +4,7 @@ function Header(){
 
     return(
         <div id="header">
-            BobsGamesReviews.com
+            <h1 id="websiteHeader">BobsGamesReviews.com</h1>
         </div>
     )
 
