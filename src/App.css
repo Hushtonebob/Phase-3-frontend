@@ -1,0 +1,206 @@
+body{
+  background-color: black;
+}
+
+#blam{
+  color: aliceblue;
+}
+
+#gameInfo{
+  margin: 0 auto;
+  height: 500px;
+  width: 500px;
+  border: 4px;
+  border-color: rgb(0, 0, 0);
+  border-radius: 15%;
+  border-style: solid;
+  background-color: rgb(144, 126, 63);
+  transition: 2s;
+}
+
+#coverArt{
+  margin: auto;
+  display: block;
+height: 200px;
+width: 195px;
+border-radius: 15%;
+padding-top: 15px;
+}
+
+#gameTitle{
+text-align: center;
+font-family: Helvetica;
+font-style:oblique;
+font-size: 50px;
+position: relative;
+bottom: 35px;
+z-index: 0;
+color: rgb(28, 25, 12);
+}
+#gameYear{
+  text-align: center;
+  font-family: helvetica;
+  position: relative;
+  bottom: 70px;
+  font-size: 20px;
+  color: rgb(51, 46, 22);
+
+}
+
+#review{
+  position: relative;
+  text-align: center;
+  font-family: Helvetica;
+  bottom: 90px;
+  font-size: 50px;
+}
+
+#buttons{
+text-align: center;
+position: relative;
+bottom:130px;
+}
+
+#updateGame{
+  height: 30px;
+  width: 100px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  font-family:Helvetica;
+  font-size: 11px; 
+}
+
+#updateGame:hover{
+  height: 30px;
+  width: 100px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: rgb(172, 172, 172);
+}
+
+#updateGame:active{
+  height: 25px;
+  width: 95px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: rgb(172, 172, 172);
+  font-size: 10px; 
+}
+
+#deleteGame{
+  position: relative;
+  top: 1px;
+  height: 30px;
+  width: 100px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  font-family:Helvetica;
+}
+
+#deleteGame:hover{
+  height: 30px;
+  width: 100px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: rgb(172, 172, 172);
+}
+#deleteGame:active{
+  height: 25px;
+  width: 95px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: rgb(172, 172, 172);
+  font-size: 12px; ;
+}
+
+#header{
+  margin: auto;
+  padding-bottom: 30px;
+  height: 50px;
+  width:500px;
+  color: wheat;
+  font-size: xx-large;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+#update{
+  position: relative;
+  bottom: 120px;
+  text-align: center;
+}
+
+#updateConfirm{
+  border: 2px;
+  width: 150px;
+  height: 25px;
+  border-style: solid;
+  border-radius: 25px;
+  font-family:Helvetica;
+  border-radius: 25px;
+  bottom: 50px;
+}
+
+#updateConfirm:hover{
+  border: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: rgb(172, 172, 172);}
+
+  #updateConfirm:active{
+    height: 20px;
+    width: 135px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(172, 172, 172);}
+
+    #confirmDeleteBtn{
+    z-index: 10;
+    position: relative;        
+    height: 25px;
+    width: 170px;
+    text-align: center;
+    bottom: 110px;
+    left: 165px;
+    border-radius: 2px;
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    }
+
+    #confirmDeleteBtn:hover{
+      z-index: 10;
+      position: relative;        
+      height: 25px;
+      width: 170px;
+      text-align: center;
+      bottom: 110px;
+      left: 165px;
+      border-radius: 2px;
+      background-color: rgb(159, 39, 39);
+      color: black;
+      font-weight: bold;
+      }
+
+      #confirmDeleteBtn:active{
+        z-index: 10;
+        position: relative;        
+        height: 20px;
+        width: 165px;
+        text-align: center;
+        bottom: 110px;
+        left: 165px;
+        border-radius: 2px;
+        background-color: red;
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+        }
