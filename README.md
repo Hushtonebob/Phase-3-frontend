@@ -38,4 +38,6 @@ $ rake server
 ## Delete entries
 ![](GIFS/delete.gif)
 
+## Video
 
+https://www.youtube.com/watch?v=C9hOTJphEJo&ab_channel=BobbyDeLuna
